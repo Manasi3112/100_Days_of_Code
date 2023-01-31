@@ -1,0 +1,30 @@
+'''
+DAY 1
+
+Problem 1
+
+
+Chef went to a shop and buys a pens and b pencils. Each pen costs x units and each pencil costs y units. Now find what is the total 
+amount Chef will spend to buy a pens and b pencils.
+
+###Input:
+
+First-line will contain 4 space separated integers a, b, x and y respectively.
+
+###Output: Print the answer in a new line.
+
+
+ 
+###Sample Input 1: 2 4 4 5
+
+###Sample Output 1: 28
+
+###Sample Input 2: 1 1 4 8
+
+###Sample Output 2: 12'''
+
+# CODE
+
+value = list(map(str,input().split()))
+output = (int(value[0])*int(value[2])) + (int(value[1])*int(value[3]))
+print(output)
