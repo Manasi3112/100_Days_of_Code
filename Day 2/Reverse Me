@@ -1,0 +1,21 @@
+'''
+Problem
+You are given a list of N integers and you need to reverse it and print the reversed list in a new line.
+
+###Input:
+
+First-line will contain the number N.
+Second line will contain N space-separated integers.
+###Output: Print the reversed list in a single line.
+
+'''
+
+## CODE
+
+N = int(input())
+list1 = list(map(str, input().split()))
+
+list_new = list1[::-1]
+
+for i in list_new:
+    print(i, end = " ")
