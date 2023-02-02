@@ -1,0 +1,19 @@
+'''You're given a number N. Print the first N lines of the below-given pattern.
+
+    *
+   **
+  ***
+ ****
+*****
+
+###Input:
+
+First-line will contain the number N.
+###Output: Print the first N lines of the given pattern.'''
+
+## CODE
+
+N = int(input())
+
+for i in range(N):
+    print("*"*(i+1), end = " ")
