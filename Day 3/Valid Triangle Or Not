@@ -1,0 +1,24 @@
+'''
+Problem
+You're given the length of three sides a, b, and c respectively. Now check if these three sides can 
+form a triangle or not. Print "YES"(without quotes) if it can form a valid triangle with an area greater than 
+0, otherwise print "NO" (without quotes).
+
+###Input:
+
+First-line will contain three numbers a, b, and c separated by space.
+###Output: Print "YES"(without quotes) if these sides can form a valid triangle, otherwise print "NO" (without quotes).
+'''
+
+## CODE
+
+list1 = list(map(str, input().split()))
+
+a = int(list1[0])
+b = int(list1[1])
+c = int(list1[2])
+
+if(((a+b) > c) and ((b+c) > a) and ((c+a) > b)):
+    print("YES")
+else:
+    print("NO")
