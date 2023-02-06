@@ -1,0 +1,59 @@
+'''
+Problem
+Read problem statements in Mandarin, Bengali, Russian, and Vietnamese as well.
+Chef is a software developer, so he has to switch between different languages sometimes.
+Each programming language has some features, which are represented by integers here.
+
+Currently, Chef has to use a language with two given features A and B. 
+He has two options --- switching to a language with two features 
+1  A1 and 1  B1, or to a language with two features 2 A2 and 2 B2.
+All four features of these two languages are pairwise distinct.
+
+Tell Chef whether he can use the first language, the second language or neither of these languages 
+(if no single language has all the required features).
+
+Input Format
+The first line of the input contains a single integer T denoting the number of test cases. The description of 
+T test cases follows.
+The first and only line of each test case contains six space-separated integers A, B, A1, B1, A2, B2.
+
+Output Format
+For each test case, print a single line containing the integer 1 if Chef should switch to the first language, or 
+2 if Chef should switch to the second language, or 0 if Chef cannot switch to either language.
+
+'''
+
+# CODE
+
+T = int(input())
+
+
+for i in range(T):
+    A, B, A1, B1, A2, B2 = map(int, input().split())
+    flag = 0
+    
+    if(flag == 0):
+        if(A == A1):
+            if(B == B1):
+                flag = 1
+                print(1)
+                
+        if(A == B1):
+            if(B == A1):
+                flag = 1
+                print(1)
+                
+        if(A == A2):
+            if(B == B2):
+                flag = 1
+                print(2)
+                
+        if(A == B2):
+            if(B == A2):
+                flag = 1
+                print(2)
+                
+        
+    
+    if(flag == 0):
+        print(0)
