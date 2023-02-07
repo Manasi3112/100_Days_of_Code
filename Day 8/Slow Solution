@@ -1,0 +1,50 @@
+'''
+Problem
+Chef is trying to solve a problem having T test cases, where, for each test case he is given a single integer N.
+
+Chef has an algorithm which takes exactly N^2 iterations for a test case with value N.
+
+The constraints of the problem are as follows:
+
+1 ≤ T ≤ maxT
+1 ≤ N ≤ maxN
+Sum of N over all test cases does not exceed sumN.
+
+Given the values maxT,maxN, and sumN, determine the maximum number of iterations Chef's algorithm can 
+take for any valid input file satisfying all the constraints.
+
+Formally speaking, find the maximum value of 
+N1*N1 + N2*N2 + ..... + NT*NT
+
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of single line consisting of three integers maxT,maxN, and sumN.
+
+Output Format
+For each test case, output the the maximum number of iterations Chef's algorithm can take in any valid test file.
+
+'''
+
+## CODE
+
+T = int(input())
+
+
+
+for i in range(T):
+    
+    
+    maxT, maxN, sumN = map(int, input().split())
+    
+    ans = 0
+    
+    while(maxT != 0 and sumN != 0):
+        
+        N = min(maxN, sumN)
+        ans = ans + (N*N)
+        
+        sumN = sumN - N
+        maxT = maxT - 1
+        
+    print(ans)
