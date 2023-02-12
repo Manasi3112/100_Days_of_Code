@@ -1,0 +1,16 @@
+'''
+problem - https://www.codechef.com/problems/MUFFINS3
+'''
+
+# CODE
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    
+    if(N <= 2):
+        print(N)
+    else:
+        print((N//2)+1)
