@@ -1,0 +1,33 @@
+'''
+Que - https://www.codechef.com/problems/DIET?tab=statement
+
+'''
+
+## CODE
+
+T = int(input())
+
+for i in range(T):
+    
+    N, K = map(int, input().split())
+    A = list(map(int, input().split()))
+    
+    flag = 0
+    i = 0
+    remains = 0
+    
+    while(N != 0):
+        remains += A[i]
+        if(K <= remains):
+            remains -= K
+            flag = 1
+        else:
+            flag = 0
+            print("NO ", i+1)
+            break
+            
+        i += 1 
+        N -= 1
+        
+    if(flag == 1):
+        print("YES")
