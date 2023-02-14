@@ -1,0 +1,15 @@
+'''
+https://www.codechef.com/problems/BREAKSTICK
+'''
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N, X = map(int, input().split())
+    
+    
+    if(N % 2 == 0 or X % 2 != 0):
+        print("YES")
+    else:
+        print("NO")
