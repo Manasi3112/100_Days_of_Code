@@ -1,0 +1,19 @@
+# https://www.codechef.com/problems/ELECTIONS
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    
+    XA, XB, XC = map(int, input().split())
+    
+    if(XA > 50 or XB > 50 or XC > 50):
+        maxVotes = max(XA, XB, XC)
+        if(maxVotes == XA):
+            print("A")
+        elif(maxVotes == XB):
+            print("B")
+        elif(maxVotes == XC):
+            print("C")
+    else:
+        print("NOTA")
