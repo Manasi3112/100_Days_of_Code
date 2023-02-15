@@ -1,0 +1,25 @@
+# QUE - https://www.codechef.com/problems/CANDY123
+
+T = int(input())
+
+for i in range(T):
+    A, B = map(int, input().split())
+    
+    candy = 1
+    
+    while(True):
+        
+        if(candy % 2 != 0):
+            A -= candy
+            #print("A = ", A)
+            if(A < 0):
+                print("Bob")
+                break
+            
+        else:
+            B-= candy
+            #print("B = ", B)
+            if(B < 0):
+                print("Limak")
+                break
+        candy += 1
