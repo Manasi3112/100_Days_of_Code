@@ -1,0 +1,35 @@
+# QUE - https://www.codechef.com/problems/TABLET
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N, B = map(int, input().split())
+    
+    W = []
+    H = []
+    
+    for i in range(N):
+        Wi, Hi, Pi = map(int, input().split())
+        if(Pi <= B):
+            W.append(Wi)
+            H.append(Hi)
+    #print("W = ", W, "\n H = ", H)
+    
+    if(len(W) == 0):
+        print("no tablet")
+    else:
+        Area = []
+        for i in range(len(W)):
+            Ai = W[i] * H[i]
+            Area.append(Ai)
+            #print("Area in forloop  == ", Area)
+       # print("AREA = ", Area)
+            
+        print(max(Area))
+        
+    
+        
+    
+        
+    
