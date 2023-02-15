@@ -1,0 +1,42 @@
+'''
+https://www.codechef.com/problems/ENCMSG
+'''
+
+#CODE
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    S1 = input()
+    
+    S = list(S1.strip())
+    
+    if(N % 2 != 0):
+        N1 = N-1
+    else:
+        N1 = N
+    
+    for i in range(0, N1, 2):
+        
+        temp = S[i]
+        S[i] = S[i+1]
+        S[i+1] = temp
+        
+    alphabets1 = "abcdefghijklmnopqrstuvwxyz"
+    alphabets = list(alphabets1.strip())
+    
+    for i in range(N):
+        pointer = alphabets.index(S[i])
+        r_pointer = 25 - pointer
+        
+        S[i] = alphabets[r_pointer]
+    
+    result = ""    
+    for j in range(len(S)):
+        result = result + S[j]
+        
+    print(result)
+        
+        
