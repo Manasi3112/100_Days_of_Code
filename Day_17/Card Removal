@@ -1,0 +1,22 @@
+# QUE - https://www.codechef.com/problems/REMOVECARDS
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    max_count = 0
+    max_num = 0
+    
+    for i in A:
+        if(A.count(i) > max_count):
+            max_count = A.count(i)
+            max_num = i
+    
+    while(max_num in A):
+        A.remove(max_num)
+
+    print(len(A))
