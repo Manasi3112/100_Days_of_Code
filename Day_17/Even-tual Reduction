@@ -1,0 +1,22 @@
+# https://www.codechef.com/problems/EVENTUAL
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    S1 = input()
+    
+    S = list(S1.strip())
+    
+    flag = 0
+    
+    for i in S:
+        count = S.count(i)
+        if(count % 2 == 0):
+            flag += 1
+    
+    if(flag == N):
+        print("YES")
+    else:
+        print("NO")
