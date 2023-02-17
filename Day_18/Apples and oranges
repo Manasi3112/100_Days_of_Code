@@ -1,0 +1,11 @@
+# QUE - https://www.codechef.com/problems/APPLEORANGE?tab=statement
+
+# cook your dish here
+import math
+T = int(input())
+
+for i in range(T):
+    
+    N, M = map(int, input().split())
+    
+    print(math.gcd(N, M))
