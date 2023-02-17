@@ -1,0 +1,22 @@
+# QUE - https://www.codechef.com/problems/CHEFARRP?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    count = 0
+    
+    for i in range(N):
+        sum1 = 0
+        product = 1
+        for j in range(i, N):
+            sum1 += A[j]
+            product *= A[j]
+            if(sum1 == product):
+                count += 1
+                
+    print(count)
