@@ -1,0 +1,15 @@
+# Que - https://www.codechef.com/problems/ODDPAIRS?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    
+    N = int(input())
+    
+    odd = N // 2
+    even = N - odd
+        #print("N = odd\n even = ", even, "\n odd = ", odd)
+        
+            
+    print(2* (even * odd))
