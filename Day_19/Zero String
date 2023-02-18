@@ -1,0 +1,21 @@
+# Que - https://www.codechef.com/problems/ZEROSTRING
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    
+    
+    N = int(input())
+    S1 = input()
+    
+    S = list(S1.strip())
+    
+    
+    if(S.count('1') > S.count('0')):
+       
+        print(1 + S.count('0'))
+    else:
+        print(S.count('1'))
+    
+    
