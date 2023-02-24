@@ -1,0 +1,22 @@
+# QUE - https://www.codechef.com/problems/RECIPE?tab=statement
+
+# cook your dish here
+import math
+T = int(input())
+
+for i in range(T):
+    
+    list1 = list(map(int, input().split()))
+    
+    N = list1[0]
+    list1.remove(list1[0])
+    
+    gcf = 0
+    
+    for i in list1:
+        gcf = math.gcd(gcf, i)
+        #print("gcf = ", gcf)
+    
+    for i in list1:
+        print(i // gcf, end = ' ')
+    print()
