@@ -1,0 +1,14 @@
+# QUE - https://www.codechef.com/problems/WEIGHTBL?tab=statement
+
+T = int(input())
+
+for i in range(T):
+    w1, w2, x1, x2, M = map(int, input().split())
+    
+    min1 = x1 * M
+    max1 = x2 * M
+    
+    if((w2 - w1) <= max1 and (w2-w1) >= min1):
+        print(1)
+    else:
+        print(0)
