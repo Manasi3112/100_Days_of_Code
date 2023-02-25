@@ -1,0 +1,24 @@
+# Que - https://www.codechef.com/problems/ENDSORTED
+
+T = int(input())
+
+for i in range(T):
+    
+    N = int(input())
+    P = list(map(int, input().split()))
+    
+    count = 0
+    
+    if(P[0] == 1 and P[N-1] == N):
+        print(0)
+    else:
+        index_1 = P.index(1)
+        index_N = N-1 - P.index(N)
+        #print("index_n = N-P.index(N) = ",index_N, " = ", N, " - ", P.index(N))
+        if(P.index(1) > P.index(N)):
+            count = index_1 + index_N - 1
+       
+        else:
+            count = index_1 + index_N
+        print(count)
+        
