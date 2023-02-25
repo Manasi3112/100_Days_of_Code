@@ -1,0 +1,11 @@
+# Que - https://www.codechef.com/problems/CHEFSTUD?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    
+    s = input()
+    
+    print(s.count('<>'))
+    
