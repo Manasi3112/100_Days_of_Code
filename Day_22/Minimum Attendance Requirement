@@ -1,0 +1,22 @@
+Que - https://www.codechef.com/problems/ATTENDU
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    
+    N = int(input())
+    B = input()
+    
+    present_days = B.count('1')
+    #print("present_days = ", present_days)
+    
+    remaining_attendance = 120 - N
+    
+    attendance = (100*(present_days + remaining_attendance))/120
+    #print("attendance = ", attendance)
+    
+    if(attendance >= 75):
+        print("YES")
+    else:
+        print("NO")
