@@ -1,0 +1,32 @@
+# que - https://www.codechef.com/problems/L56GAME?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    even_count = 0
+    odd_count = 0
+    
+    
+    if(N == 1):
+        print(1)
+    else:
+        for i in A:
+            
+            if(i%2 == 0):
+                even_count += 1
+            else:
+                odd_count += 1
+        
+        if(odd_count%2 != 0):
+            print(2)
+        else:
+            print(1)
+        
+        
+            
+    
+    
