@@ -1,0 +1,21 @@
+# Que - https://www.codechef.com/problems/PRIMEREVERSE
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    
+    N = int(input())
+    A = input()
+    B = input()
+    
+    if(A == B):
+        print("YES")
+    else:
+        one_count_A = A.count('1')
+        one_count_B = B.count('1')
+        
+        if(one_count_A == one_count_B):
+            print("YES")
+        else:
+            print("NO")
