@@ -1,0 +1,20 @@
+# Que - https://www.codechef.com/problems/CNDLOVE?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    sum1 = 0
+    
+    for i in A:
+        sum1 += i
+        
+    if(sum1%2 != 0):
+        print("YES")
+    else:
+        print("NO")
+        
+        
