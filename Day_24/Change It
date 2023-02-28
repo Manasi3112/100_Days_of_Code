@@ -1,0 +1,17 @@
+# Que - https://www.codechef.com/problems/CHNGIT?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    max1 = 0
+    for i in A:
+        if(A.count(i) > max1):
+            
+            max1 = A.count(i)
+           
+    print(N-max1)
