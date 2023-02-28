@@ -1,0 +1,11 @@
+# Que - https://www.codechef.com/problems/CFRTEST?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    n = int(input())
+    list1 = list(map(int, input().split()))
+    set1 = set(list1)
+    
+    print(len(set1))
