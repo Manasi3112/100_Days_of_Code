@@ -1,0 +1,16 @@
+# Que - https://www.codechef.com/problems/LOSTWKND
+
+T = int(input())
+
+for i in range(T):
+    A1, A2, A3, A4, A5, P = map(int, input().split())
+    
+    A = [A1*P, A2*P, A3*P, A4*P, A5*P]
+    
+    sum1 = sum(A)
+    
+    if(sum1/24 <= 5):
+        print("No")
+    else:
+        print("Yes")
+    
