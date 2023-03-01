@@ -1,0 +1,17 @@
+# Que - https://www.codechef.com/problems/FODCHAIN
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    E, K = map(int, input().split())
+    
+    count = 1
+    
+    while(True):
+        E = E//K
+        if(E == 0):
+            break
+        count += 1
+    
+    print(count)
