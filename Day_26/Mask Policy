@@ -1,0 +1,13 @@
+# Que - https://www.codechef.com/problems/MASKPOL
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N, infected = map(int, input().split())
+    
+    not_infected = N - infected
+    
+    no_of_masks = min(infected, not_infected)
+    
+    print(no_of_masks)
