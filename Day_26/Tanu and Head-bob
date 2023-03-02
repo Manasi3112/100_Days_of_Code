@@ -1,0 +1,15 @@
+# Que - https://www.codechef.com/problems/HEADBOB
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    string = input()
+    
+    if('I' in string):
+        print("INDIAN")
+    elif('Y' in string):
+        print("NOT INDIAN")
+    else:
+        print("NOT SURE")
