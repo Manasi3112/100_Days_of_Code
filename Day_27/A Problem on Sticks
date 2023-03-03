@@ -1,0 +1,19 @@
+# Que - https://www.codechef.com/problems/TREE2?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    A.sort()
+    count = 0
+    max1 = 0
+    
+    for i in range(N):
+        if(A[i] > max1):
+            count += 1
+            max1 = A[i]
+            
+    print(count)
