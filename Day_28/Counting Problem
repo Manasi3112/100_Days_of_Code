@@ -1,0 +1,20 @@
+# Que - https://www.codechef.com/problems/COUNTP?tab=statement
+
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    odd_count = 0
+    
+    for i in range(N):
+        if(A[i] % 2 != 0):
+            odd_count += 1
+            
+    if(odd_count % 2 == 0 and odd_count > 0):
+        print("YES")
+   
+    else:
+        print("NO")
+    
