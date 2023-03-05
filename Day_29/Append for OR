@@ -1,0 +1,22 @@
+# Que - https://www.codechef.com/problems/APPENDOR?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N, Y = map(int, input().split())
+    A = list(map(int, input().split()))
+    
+    #print("T === ", i)
+    res = 0
+    flag = 0
+    
+    for i in range(N):
+        res = res | A[i]
+    #print("\nRES = ", res, "\n")
+        
+    result = res ^ Y
+    if(res | result == Y):
+        print(result)
+    else:
+        print(-1)
