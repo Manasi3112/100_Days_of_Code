@@ -1,0 +1,22 @@
+# Que - https://www.codechef.com/problems/AVG?tab=submissions
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N, K, V = map(int, input().split())
+    
+    A = list(map(int, input().split()))
+    
+    sub = V * (N+K)
+    for i in A:
+        sub -= i
+        
+    result = sub / K
+    
+    
+    
+    if(result > 0 and sub % K == 0):
+        print(int(result))
+    else:
+        print(-1)
