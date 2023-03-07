@@ -1,0 +1,23 @@
+# Que - https://www.codechef.com/problems/SC31?tab=submissions
+
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    sList = []
+    S = [0, 0, 0, 0 ,0, 0, 0, 0, 0, 0]
+    
+    for i in range(N):
+        Si = input()
+        sList.append(Si)
+  
+    
+    for i in range(N):
+        
+        for j in range(1, 10):
+            ijk = sList[i][j]
+            S[j] = int(S[j]) ^ int(ijk)
+        
+    count = str(S).count('1')
+    print(count)
+        
