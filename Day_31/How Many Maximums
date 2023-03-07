@@ -1,0 +1,15 @@
+# Que - https://www.codechef.com/problems/HOWMANYMAX?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    A = input()
+    
+    count = 0
+    
+    count_10 = A.count('10')
+    
+    print(count_10+1)
+    
