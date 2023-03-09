@@ -1,0 +1,25 @@
+# Que - https://www.codechef.com/problems/BALLOON
+
+# cook your dish here
+
+T = int(input())
+
+for i in range(T):
+    
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    num = [1, 2, 3, 4, 5, 6, 7]
+    count1 = 0
+    count2 = 0
+    
+    for i in range(N):
+        if(A[i] in num):
+            count1 += 1
+            if(count1 == 7):
+                break
+        count2 += 1
+        
+    print(count2+1)
+        
+    
