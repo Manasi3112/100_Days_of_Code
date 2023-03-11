@@ -1,0 +1,15 @@
+# Que - https://www.codechef.com/problems/LONGSEQ?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    D = input()
+    
+    count1 = D.count("0") 
+    count2 = D.count("1")
+    
+    if count1 == 1 or count2 == 1:
+        print("Yes")
+    else:
+        print("No")
