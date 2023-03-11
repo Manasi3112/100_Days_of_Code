@@ -1,0 +1,22 @@
+# Que - https://www.codechef.com/problems/PERMEXIS?tab=statement
+
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    count = 0
+    j = 0
+    
+    for i in range(N-1):
+        if(abs(A[i] - A[i+1]) <= 1):
+            count += 1
+        
+        else:
+            break
+    
+    if(count == N-1):
+        print("YES")
+    else:
+        print("NO")
