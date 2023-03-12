@@ -1,0 +1,43 @@
+# Que - https://www.codechef.com/problems/HILLS?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N, U, D = map(int, input().split())
+    H = list(map(int, input().split()))
+    
+    hill_num = 0
+    parachute = 1
+    
+    for i in range(N-1):
+        #print("H[i] === ", H[i], "i === ", i)
+        if(H[i] == H[i+1]):
+            hill_num += 1
+            continue
+        elif(H[i] < H[i+1]):
+            
+            if(H[i+1] - H[i] <= U):
+                hill_num += 1
+                continue
+            else:
+                break
+        elif(H[i] > H[i+1]):
+            
+            if(H[i]-H[i+1] <= D):
+                hill_num += 1
+                continue
+            elif(parachute == 1):
+                hill_num += 1
+                parachute = 0
+                continue
+            else:
+                break
+        else:
+            break
+    
+    
+    
+    print(hill_num+1)
+                
+        
