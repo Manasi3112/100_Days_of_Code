@@ -1,0 +1,11 @@
+# Que - https://www.codechef.com/problems/GRIDXOR?tab=statement
+
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    
+    for i in range(N):
+        for j in range(N):
+            print(1, end = " ")
+        print("")
