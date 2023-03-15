@@ -1,0 +1,10 @@
+# Que - https://www.codechef.com/problems/DISABLEDKING
+
+T = int(input())
+for i in range(T):
+    N = int(input())
+    
+    if(N % 2 == 0):
+        print(N)
+    else:
+        print(N-1)
