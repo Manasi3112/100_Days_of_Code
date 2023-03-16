@@ -1,0 +1,18 @@
+# Que - https://www.codechef.com/problems/WALK?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    W = list(map(int,input().split()))
+    
+    velocity = max(W)
+    index = W.index(velocity)
+    V = velocity + index
+    
+    for i in range(N):
+        if(V < W[i]+i):
+            V = W[i]+i
+            
+    print(V)
