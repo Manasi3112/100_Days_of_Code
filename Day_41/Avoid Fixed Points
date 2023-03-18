@@ -1,0 +1,15 @@
+# Que - https://www.codechef.com/problems/NOFIX?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    count = 0
+    
+    for i in range(N):
+        if(A[i] == i + 1 + count):
+            count += 1
+    print(count)
