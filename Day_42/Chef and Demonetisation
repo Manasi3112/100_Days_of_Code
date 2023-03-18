@@ -1,0 +1,16 @@
+# Que - https://www.codechef.com/problems/CHFMOT18?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    S, N = map(int, input().split())
+    
+    ans = S // N
+    
+    if (S%N) % 2 and (S%N) > 1 :
+        ans += 2
+    elif (S%N) > 0:
+        ans += 1
+    print(ans)
+            
