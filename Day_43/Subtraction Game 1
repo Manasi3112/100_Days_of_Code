@@ -1,0 +1,15 @@
+# Que - https://www.codechef.com/problems/AMSGAME1?tab=statement
+
+# cook your dish here
+import math
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    list1 = list(map(int, input().split()))
+    gcd1 = 0
+    
+    for i in range(N):
+        gcd1 = math.gcd(gcd1, list1[i])
+        
+    print(gcd1)
