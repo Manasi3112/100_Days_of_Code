@@ -1,0 +1,16 @@
+# Que - https://www.codechef.com/problems/SPLITIT?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    S = input()
+    
+    A = S[0:N-1]
+    B = S[N-1]
+    
+    if(B in A):
+        print("YES")
+    else:
+        print("NO")
