@@ -1,0 +1,23 @@
+# Que - https://www.codechef.com/problems/HIRETEST?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N, M = map(int, input().split())
+    X, Y = map(int, input().split())
+    string = []
+    for i in range(N):
+        s = input()
+        string.append(s)
+    
+    ans = ""
+    
+    for i in string:
+        P = i.count("P")
+        F = i.count("F")
+        if(F >= X or F >= X-1 and P >= Y):
+            ans+="1" 
+        else:
+            ans+="0"
+    print(ans)
