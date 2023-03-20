@@ -1,0 +1,24 @@
+# Que - https://www.codechef.com/problems/HELPLIRA?tab=statement
+
+N = int(input())
+max1 = 0
+index1 = 0
+index2 = 0
+min1 = 999999
+
+
+for i in range(N):
+    x1, y1, x2, y2, x3, y3 = map(int, input().split())
+    
+    A1 = abs(0.5 * (x1*(y2-y3) + x2*(y3-y1) + x3*(y1-y2)))
+   # print("A1 = ", A1)
+    if(A1 >= max1):
+        max1 = A1
+        index1 = i
+    if(A1 <= min1):
+        min1 = A1
+        index2 = i
+        
+        
+print(index2+1, index1+1)
+    
