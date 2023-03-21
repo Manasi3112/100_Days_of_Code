@@ -1,0 +1,15 @@
+# Que - https://www.codechef.com/problems/SSCRIPT?tab=submissions
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N, K = map(int, input().split())
+    S = input()
+    
+    string = "*"*K
+    
+    if(string in S):
+        print("YES")
+    else:
+        print("NO")
