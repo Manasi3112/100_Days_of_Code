@@ -1,0 +1,14 @@
+# Que - https://www.codechef.com/problems/CSUB
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    string = input()
+    
+    sum1 = 0
+    for i in range(string.count("1")+1):
+       
+        sum1 += i
+    print(sum1)
