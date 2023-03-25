@@ -1,0 +1,24 @@
+# Que - https://www.codechef.com/problems/SUMOFPROD1?tab=statement
+
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    sum1 = 0 
+    count = 0
+    j = 0
+ 
+    for i in range(N):
+        if(A[i] == 1):
+            count += 1 + j
+            j += 1
+        else:
+            j = 0
+        
+      
+
+        
+    print(count)
+    
