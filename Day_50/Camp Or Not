@@ -1,0 +1,45 @@
+# Que - https://www.codechef.com/problems/CAMPON?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    D = int(input())
+    di = []
+    pi = []
+    for i in range(D):
+        de, pe = map(int, input().split())
+        di.append(de)
+        pi.append(pe)
+    
+    Q = int(input())
+    dead = []
+    req = []
+    for i in range(Q):
+        deadi, reqi = map(int, input().split())
+        dead.append(deadi)
+        req.append(reqi)
+        
+    flag = 0
+    sumOfProblems = []
+    for i in range(Q):
+        sumOfProblems.append(0)
+    
+    for i in range(Q):
+        for j in range(D):
+            if(dead[i] >= di[j]):
+                #print("dead[i], pi[j] = ", dead[i], " ", di[j])
+                day = di[j]
+                sumOfProblems[i] += pi[j]
+                flag = 1
+            else:
+                flag = 0
+    #print(sumOfProblems)
+                
+    for i in range(Q):
+        if(sumOfProblems[i] >= req[i]):
+            #print("Inside iffff")
+            print("Go Camp")
+        else:
+            print("Go Sleep")
+        
