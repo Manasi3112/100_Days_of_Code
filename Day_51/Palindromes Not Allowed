@@ -1,0 +1,22 @@
+# Que - https://www.codechef.com/problems/NOPAL?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    
+    i = 0
+    alphabets = "abcdefghijklmnopqrstuvwxyz"
+    s = ""
+    
+    if(N<=25):
+        s = alphabets[:N]
+    else:
+        num = N // 26
+        s = alphabets * num
+        rem = N % 26
+        s += alphabets[:rem]
+        
+        
+    print(s)
