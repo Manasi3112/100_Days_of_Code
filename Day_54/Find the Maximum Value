@@ -1,0 +1,12 @@
+# Que - https://www.codechef.com/problems/LOSTMAX
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    list1 = list(map(int, input().split()))
+    
+    N = len(list1) - 1
+    list1.remove(N)
+    
+    print(max(list1))
