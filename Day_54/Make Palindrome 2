@@ -1,0 +1,16 @@
+# Que - https://www.codechef.com/problems/MAKEPAL2?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    S = input()
+    
+    count1 = S.count('1')
+    count0 = S.count('0')
+    
+    if(count1 >= count0):
+        print('1'*count1)
+    else:
+        print('0'*count0)
