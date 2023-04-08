@@ -1,0 +1,27 @@
+def dot_product(A, B):
+    
+    ans = np.dot(A, B)
+    
+    return ans
+
+
+n, m = map(int, input().split())
+A = list()
+for i in range(n):
+    col = list(map(int, input().split()))
+    A.append(col)
+A = np.array(A)
+#print("A = ", A)
+m, p = map(int, input().split())
+B = list()
+for i in range(m):
+    col = list(map(int, input().split()))
+    B.append(col)
+B = np.array(B)
+
+result = dot_product(A, B)
+
+for i in range(n):
+    for j in range(p):
+        print(result[i][j], end = " ")
+    print("")
