@@ -1,0 +1,32 @@
+# Que - https://www.codechef.com/problems/CATSDOGS?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    C, D, L = map(int, input().split())
+    
+    if(L % 4 == 0):
+        
+        rem = L / 4
+        if(C < 2 * D):
+        
+            if(rem <= C+D and rem >= D):
+                
+                print("yes")
+            else:
+                print("no")
+        else:
+            cat = C - (D * 2)
+                
+            if(rem >= (cat + D) and rem <= C + D):
+                print("yes")
+            else:
+                print("no")
+            
+        
+    else:
+        print("no")
+
+            
+        
