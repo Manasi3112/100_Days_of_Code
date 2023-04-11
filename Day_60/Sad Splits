@@ -1,0 +1,23 @@
+# Que - https://www.codechef.com/problems/SPLITPAIR?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    
+    strN = str(N)
+    count = 0
+    cnt = 0
+    
+    for i in range(len(str(N))):
+        if(int(strN[i]) % 2 == 0):
+            count += 1
+        else:
+            cnt += 1
+            
+    if((count >= 2 and N % 2 == 0) or (cnt >= 2 and N % 2 != 0)):
+        #print("count = ", count, "  N = ", N%2)
+        print("YES")
+    else:
+        print("NO")
