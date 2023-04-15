@@ -1,0 +1,20 @@
+# Que - https://www.codechef.com/problems/HEIGHTS?tab=statement
+
+# cook your dish here
+import math as m
+from collections import Counter
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    H = dict(Counter(map(int, input().split())))
+    
+    countOf1 = list(H.values()).count(1)
+    
+    
+    if(H[max(H.keys())] == 1 and list(H.values()).count(2) == (N // 2)):
+            print(2)
+    else:
+        print(m.ceil(countOf1 / 2))
+    
+        
