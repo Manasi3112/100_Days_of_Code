@@ -1,0 +1,25 @@
+# Que - https://www.codechef.com/problems/FILLGRID
+
+# cook your dish here
+T = int(input())
+
+def printGrid(N, one):
+    for i in range(N):
+        for j in range(N):
+            print(one, end = " ")
+        print("")
+
+for i in range(T):
+    N = int(input())
+    
+    if(N%2 == 0):
+        printGrid(N, -1)
+    else:
+        one = 1
+        for i in range(N):
+            for j in range(N):
+                if(i == j):
+                    print(-1, end = " ")
+                else:
+                    print(1, end = " ")
+            print("")
