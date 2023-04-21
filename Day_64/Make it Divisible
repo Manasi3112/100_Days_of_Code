@@ -1,0 +1,18 @@
+# Que - https://www.codechef.com/problems/MAKEDIV3
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    
+    num = '1'
+    for i in range(N-1):
+        num = num + '0'
+    num = int(num)
+    
+    for i in range(num+1, int(str(num)+'0')):
+        if(i % 2 != 0):
+            if(i % 3 == 0 and i % 9 != 0):
+                print(i)
+                break
