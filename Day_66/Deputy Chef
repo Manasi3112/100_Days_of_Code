@@ -1,0 +1,32 @@
+# que - https://www.codechef.com/problems/DEPCHEF?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    a = list(map(int, input().split()))
+    d = list(map(int, input().split()))
+    
+    flag = 0
+    
+    for i in range(1, N-1):
+         
+        if(a[i+1] + a[i-1] < d[i]):
+            if(flag < d[i]):
+                flag = d[i]
+        
+    if(a[N-1] + a[1] < d[0]):
+        if(flag < d[0]):
+            flag = d[0]
+        
+    if(a[0] + a[N-2] < d[N-1]):
+        if(flag < d[N-1]):
+            flag = d[N-1]
+        
+    if(flag == 0):
+        print(-1)
+    else:
+        print(flag)
+    
+    
