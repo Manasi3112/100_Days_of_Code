@@ -1,0 +1,32 @@
+# Que - https://www.codechef.com/problems/CHEFRECP?tab=statement
+
+# cook your dish here
+from collections import Counter
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    lists = list(map(int, input().split()))
+    A = dict(Counter(lists))
+    
+    list2 = []
+    flag = 0
+    
+    #print(A)
+    
+    if(len(A.values()) != len(set(A.values()))):
+   
+        flag = 1
+        print("NO")
+    else:
+        for i in range(N-1):
+            if(lists[i] != lists[i+1]):
+                temp = lists[i+1+1:N:1]
+                if(lists[i] in temp):
+                    flag = 1
+                    print("NO")
+                    break
+    if(flag == 0):
+        print("YES")
+
+        
