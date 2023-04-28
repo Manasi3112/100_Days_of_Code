@@ -1,0 +1,7 @@
+1) from list
+
+rdd = spark.sparkContext.parallelize(list)
+
+2) from textfile
+
+rdd = spark.sparkContext.textFile(location_of_file)
