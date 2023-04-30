@@ -1,0 +1,26 @@
+# QUE - https://www.codechef.com/problems/CHBLLNS?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    R, G, B = map(int, input().split())
+    K = int(input())
+    
+    if(R >= K):
+        r1 = K-1
+    else:
+        r1 = R
+    
+    if(G >= K):
+        g1 = K-1
+    else:
+        g1 = G
+        
+    if(B >= K):
+        b1 = K-1
+    else:
+        b1 = B
+        
+    print(r1 + g1 + b1 +1)
+    
