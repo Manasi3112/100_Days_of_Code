@@ -1,0 +1,13 @@
+# QUE - https://www.codechef.com/problems/PCJ18B?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    temp = 0
+    
+    for i in range(0, N, 2):
+        temp += (N - (i + 1) + 1)**2
+        
+    print(temp)
