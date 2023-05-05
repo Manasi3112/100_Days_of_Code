@@ -1,0 +1,35 @@
+# QUE - https://www.codechef.com/problems/NAME1?tab=statement
+
+T = int(input())
+
+for i in range(T):
+    A, B = map(str, input().split())
+    N = int(input())
+    C = ""
+    flag = 1
+    
+    for i in range(N):
+        C += input()
+        #print(C)
+    
+    parent = A + B
+    
+    for i in range(len(C)):
+        if(C[i] not in parent):
+            flag = 0
+            print("NO")
+            break
+        else:
+            #print("inside else")
+            parent = parent.replace(C[i], "", 1)
+   # print(parent)
+            
+    if(flag == 1):
+        print("YES")
+            
+        
+            
+        
+    
+        
+    
