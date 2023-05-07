@@ -1,0 +1,23 @@
+# Que - https://www.codechef.com/problems/HOTEL?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    arrival = list(map(int, input().split()))
+    depart = list(map(int, input().split()))
+    
+    max1 = max(max(arrival), max(depart))
+    count = 0
+    maxcount = 0
+    
+    for i in range(max1):
+        if(i in arrival):
+            count += arrival.count(i)
+        if(i in depart):
+            count -= depart.count(i)
+        
+        maxcount = max(maxcount, count)
+        
+    print(maxcount)
