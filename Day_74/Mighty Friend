@@ -1,0 +1,38 @@
+# QUE - https://www.codechef.com/problems/MTYFRI
+
+# cook your dish here
+import numpy as np
+T = int(input())
+
+for i in range(T):
+    N, K = map(int, input().split())
+    A = list(map(int, input().split()))
+    
+    flag = 0
+    
+    T = A[1: N: 2]
+    M = A[0: N: 2]
+    
+    while(K >= 0):
+       # print("\nK = ", K)
+        if(sum(T) > sum(M)):
+            #print("INSIDE IFFFF")
+            flag = 1
+            break
+        max1 = max(M)
+        min1 = min(T)
+        T[T.index(min1)] = max1
+       # print("T = ", T)
+        
+        M[M.index(max1)] = min1
+       # print("M = ", M)
+       # print("sum = ", sum(T), "  ", sum(M))
+        
+        K -= 1
+   
+    
+    if(flag == 0):
+        print("NO")
+    else:
+        print("YES")
+        
