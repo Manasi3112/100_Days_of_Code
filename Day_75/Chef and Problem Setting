@@ -1,0 +1,47 @@
+# QUE - https://www.codechef.com/problems/PROBSET
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N, M = map(int, input().split())
+    list1 = []
+    flag = 0
+    invalid = 0
+    weak = 0
+    
+    for i in range(N):
+        list1.append(input())
+        
+    for i in range(N):
+       
+        if("correct" in list1[i]):
+            list2 = list1[i]
+            if(list2.count('1') == M):
+                flag += 1
+               
+            if(list2.count('0') >= 1):
+                invalid += 1
+              
+                
+        if("wrong" in list1[i]):
+            list2 = list1[i]
+            
+     
+            if(list2.count('0') >= 1):
+                flag += 1
+             
+                
+            if(list2.count('1') == M):
+                weak += 1
+             
+                
+    if(flag == N):
+        print("FINE")
+    elif(invalid >= 1):
+        print("INVALID")
+    elif(weak >= 1):
+        print("WEAK")
+                
+                
+                
