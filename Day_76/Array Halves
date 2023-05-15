@@ -1,0 +1,23 @@
+# Que - https://www.codechef.com/problems/ARRHALVES?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    list1 = list(map(int, input().split()))
+    
+    first = list1[0:N]
+    second = list1[N:2*N]
+    
+    i = 0
+    count = 0
+    temp = temp2 = 0
+    
+    for i in range(len(list1)):
+        if(list1[i] <= N):
+            count += temp
+        else:
+            temp += 1
+        
+    print(count)
