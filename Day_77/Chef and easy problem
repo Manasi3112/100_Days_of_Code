@@ -1,0 +1,15 @@
+# Que - https://www.codechef.com/problems/CHEFA?tab=statement
+
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    A.sort(reverse = True)
+   
+    ans = 0
+    for i in range(0, N, 2):
+        ans += A[i]
+        
+    print(ans)
