@@ -1,0 +1,19 @@
+# Que - https://www.codechef.com/problems/ALTARAY?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    A.reverse()
+    
+    ans = [1] * N
+    
+    for i in range(1, N):
+        if A[i] * A[i - 1] < 0:
+            ans[i] = ans[i - 1] + 1
+    
+    ans.reverse()        
+    print(*ans)
