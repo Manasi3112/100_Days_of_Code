@@ -1,0 +1,33 @@
+# Que - https://www.codechef.com/problems/DIFFMED?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    n = int(input())
+    
+    que = []
+    ans = []
+    
+    for i in range(1, n+1):
+        que.append(i)
+        ans.append(i)
+    
+    #print(que[n//2])
+    ans[0] = que[n-1]
+    ans[1] = que[0]
+    j = 2
+    #print(ans)
+    
+    for i in range(2, n, 2):
+       # print("brforeeeeeeee ", i, " ", que[n-j])
+        ans[i] = que[n-j]
+        j += 1
+    j = 3    
+    for i in range(3, n, 2):
+        #print(que)
+        #print("afterrrrrrrrr = ", i, " ", que[j-2])
+        ans[i] = que[j-2]
+        j += 1
+        
+    print(*ans)
