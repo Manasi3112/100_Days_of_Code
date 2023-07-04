@@ -1,0 +1,29 @@
+# que - https://www.codechef.com/problems/PMA?tab=statement
+
+import numpy as np
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+   
+    even = []
+    odd = []
+    
+    for i in range(0, N):
+        if(i % 2 == 0):
+            odd.append(abs(A[i]))
+        else:
+            even.append(abs(A[i]))
+    even.sort()
+    odd.sort()
+    #print(even)
+    #print(odd)
+    
+    if(odd[0] < even[len(even)-1]):
+        temp = even[len(even)-1] 
+        even[len(even)-1] = odd[0]
+        odd[0] = temp
+    
+    #print(sum(even))
+    print(sum(odd) - sum(even))
