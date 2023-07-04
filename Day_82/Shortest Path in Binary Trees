@@ -1,0 +1,17 @@
+# que - https://www.codechef.com/problems/BINTREE?tab=statement
+
+# cook your dish here
+N = int(input())
+
+for k in range(N):
+    i, j = map(int, input().split())
+    count = 0
+    
+    while(i != j):
+        if(i > j):
+            i = i // 2
+        else:
+            j = j // 2
+        count += 1
+        
+    print(count)
