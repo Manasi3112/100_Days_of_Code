@@ -1,0 +1,31 @@
+# que - https://www.codechef.com/problems/STRAME?tab=statement
+
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+    S = input()
+
+    count = 0
+    i = 0
+
+    if N == 1:
+        print("Ramos")
+    else:
+        while i <= N - 2:
+            if S[i] != S[i + 1]:
+                print("SSSS = ", S)
+                count += 1
+                S = S[:i] + S[i + 2:]  
+                print("S = ", S)
+                N -= 2 
+                if i > 0:
+                    print("Inside if = ", i)
+                    i -= 1 
+            else:
+                i += 1
+
+        if count % 2 == 0:
+            print("Ramos")
+        else:
+            print("Zlatan")
