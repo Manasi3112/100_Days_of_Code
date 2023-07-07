@@ -1,0 +1,16 @@
+# que - https://www.codechef.com/problems/REMELEM?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    N, K = map(int, input().split())
+    A = list(map(int, input().split()))
+    
+    if(N == 1):
+        print("yes")
+    else:
+        if(min(A) + max(A) <= K):
+            print("yes")
+        else:
+            print("no")
