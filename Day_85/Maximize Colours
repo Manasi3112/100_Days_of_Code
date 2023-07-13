@@ -1,0 +1,36 @@
+# Que - https://www.codechef.com/problems/COLOUR?tab=statement
+
+T = int(input())
+
+for i in range(T):
+    X, Y, Z = map(int, input().split())
+    
+    count = 0
+    if(X >= 1):
+        #print("4th if", X)
+        count += 1
+        X -= 1
+    if(Y >= 1):
+        #print("5th if", Y)
+        count += 1
+        Y -= 1
+    if(Z >= 1):
+        #print("6th if", Z)
+        count += 1
+        Z -= 1
+    #print(" = ", count)
+        
+    arr = [X, Y, Z]
+    arr.sort()
+    
+    if(arr[0] >= 2):
+        count += 3
+    elif(arr[0] == 1 and arr[2] >= 2):
+        count += 2
+    elif(arr[1] >= 1):
+        count += 1
+
+    
+    
+    print(count)
+  
