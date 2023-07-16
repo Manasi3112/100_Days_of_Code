@@ -1,0 +1,9 @@
+# refer - https://www.codechef.com/problems/UNICOURS?tab=statement
+
+T = int(input())
+
+for i in range(T):
+    n = int(input())
+    a = list(map(int, input().split()))
+    
+    print(n - max(a))
