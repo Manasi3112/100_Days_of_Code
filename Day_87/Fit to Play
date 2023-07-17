@@ -1,0 +1,23 @@
+# que - https://codechef.com/problems/PLAYFIT?tab=statement
+
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    n = int(input())
+    a = list(map(int, input().split()))
+    
+    ans = 0
+    temp = a[0]
+    
+    for i in range(1, n):
+        if(temp < a[i]):
+            ans = max(a[i] - temp, ans)
+        else:
+            temp = a[i]
+        
+    
+    if(ans == 0):
+        print("UNFIT")
+    else:
+        print(ans)
