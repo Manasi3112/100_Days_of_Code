@@ -1,0 +1,13 @@
+# QUE - https://www.codechef.com/problems/MIXCOLOR?tab=statement
+
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    b = list(set(A))
+    
+    print(N - len(b))
+            
+            
